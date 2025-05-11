@@ -42,113 +42,257 @@ const users: User[] = [
   }
 ];
 
-// Sample companies
+// Updated list of companies including international MNCs and Indian IT companies
 const companies: Company[] = [
   {
     id: "1",
-    name: "Tech Corp",
-    description: "Leading technology company focused on innovation",
+    name: "Google",
+    description: "Leading technology company focused on search and cloud technologies",
     logo: "https://logo.clearbit.com/google.com",
-    website: "https://techcorp.com",
+    website: "https://google.com",
     industry: "Technology",
-    size: "1000+",
-    location: "San Francisco, CA",
-    foundedYear: 2000,
+    size: "10000+",
+    location: "Mountain View, CA",
+    foundedYear: 1998,
     ownerId: "3"
   },
   {
     id: "2",
-    name: "Finance Pro",
-    description: "Financial solutions for modern businesses",
-    logo: "https://logo.clearbit.com/jpmorgan.com",
-    website: "https://financepro.com",
+    name: "JP Morgan Chase",
+    description: "Global financial services and investment banking",
+    logo: "https://logo.clearbit.com/jpmorganchase.com",
+    website: "https://jpmorganchase.com",
     industry: "Finance",
-    size: "500-1000",
+    size: "250000+",
     location: "New York, NY",
-    foundedYear: 1995,
+    foundedYear: 1799,
     ownerId: "4"
   },
   {
     id: "3",
-    name: "Health Plus",
-    description: "Innovative healthcare solutions",
-    logo: "https://logo.clearbit.com/unitedhealth.com",
-    website: "https://healthplus.com",
+    name: "UnitedHealth Group",
+    description: "Healthcare and insurance provider",
+    logo: "https://logo.clearbit.com/unitedhealthgroup.com",
+    website: "https://unitedhealthgroup.com",
     industry: "Healthcare",
-    size: "201-500",
-    location: "Boston, MA",
-    foundedYear: 2010,
+    size: "350000+",
+    location: "Minnetonka, MN",
+    foundedYear: 1977,
     ownerId: "5"
   },
   {
     id: "4",
-    name: "Digital Creatives",
-    description: "Creative digital agency specializing in branding and design",
+    name: "Adobe",
+    description: "Creative and document software solutions",
     logo: "https://logo.clearbit.com/adobe.com",
-    website: "https://digitalcreatives.com",
-    industry: "Design",
-    size: "51-200",
-    location: "Los Angeles, CA",
-    foundedYear: 2012,
+    website: "https://adobe.com",
+    industry: "Technology",
+    size: "25000+",
+    location: "San Jose, CA",
+    foundedYear: 1982,
     ownerId: "6"
   },
   {
     id: "5",
-    name: "EduTech Innovations",
-    description: "Transforming education through technology",
+    name: "Coursera",
+    description: "Online learning platform with university partnerships",
     logo: "https://logo.clearbit.com/coursera.org",
-    website: "https://edutechinnovations.com",
+    website: "https://coursera.org",
     industry: "Education",
-    size: "51-200",
-    location: "Austin, TX",
-    foundedYear: 2015,
+    size: "1000+",
+    location: "Mountain View, CA",
+    foundedYear: 2012,
     ownerId: "7"
   },
   {
     id: "6",
-    name: "Green Energy Solutions",
-    description: "Sustainable energy solutions for a greener future",
+    name: "Tesla",
+    description: "Electric vehicles and clean energy solutions",
     logo: "https://logo.clearbit.com/tesla.com",
-    website: "https://greenenergysolutions.com",
-    industry: "Energy",
-    size: "201-500",
-    location: "Denver, CO",
-    foundedYear: 2010,
+    website: "https://tesla.com",
+    industry: "Automotive/Energy",
+    size: "100000+",
+    location: "Austin, TX",
+    foundedYear: 2003,
     ownerId: "8"
   },
   {
     id: "7",
-    name: "Global Logistics",
-    description: "International shipping and logistics services",
+    name: "FedEx",
+    description: "Global shipping and logistics services",
     logo: "https://logo.clearbit.com/fedex.com",
-    website: "https://globallogistics.com",
+    website: "https://fedex.com",
     industry: "Logistics",
-    size: "1000+",
-    location: "Chicago, IL",
-    foundedYear: 1998,
+    size: "450000+",
+    location: "Memphis, TN",
+    foundedYear: 1971,
     ownerId: "9"
   },
   {
     id: "8",
-    name: "Food Delivery Network",
-    description: "Connecting restaurants with hungry customers",
+    name: "DoorDash",
+    description: "Food delivery platform",
     logo: "https://logo.clearbit.com/doordash.com",
-    website: "https://fooddeliverynetwork.com",
-    industry: "Food & Beverage",
-    size: "501-1000",
-    location: "Seattle, WA",
-    foundedYear: 2014,
+    website: "https://doordash.com",
+    industry: "Food & Delivery",
+    size: "8000+",
+    location: "San Francisco, CA",
+    foundedYear: 2013,
     ownerId: "10"
+  },
+  {
+    id: "9",
+    name: "Tata Consultancy Services",
+    description: "Indian multinational IT services and consulting company",
+    logo: "https://logo.clearbit.com/tcs.com",
+    website: "https://www.tcs.com",
+    industry: "IT Services",
+    size: "500000+",
+    location: "Mumbai, India",
+    foundedYear: 1968,
+    ownerId: "11"
+  },
+  {
+    id: "10",
+    name: "Infosys",
+    description: "Indian multinational IT company providing business consulting, technology, and outsourcing services",
+    logo: "https://logo.clearbit.com/infosys.com",
+    website: "https://www.infosys.com",
+    industry: "IT Services",
+    size: "300000+",
+    location: "Bangalore, India",
+    foundedYear: 1981,
+    ownerId: "12"
+  },
+  {
+    id: "11",
+    name: "Wipro",
+    description: "Leading global information technology company",
+    logo: "https://logo.clearbit.com/wipro.com",
+    website: "https://www.wipro.com",
+    industry: "IT Services",
+    size: "250000+",
+    location: "Bangalore, India",
+    foundedYear: 1945,
+    ownerId: "13"
+  },
+  {
+    id: "12",
+    name: "HCL Technologies",
+    description: "Global technology company helping enterprises reimagine their businesses",
+    logo: "https://logo.clearbit.com/hcltech.com",
+    website: "https://www.hcltech.com",
+    industry: "IT Services",
+    size: "200000+",
+    location: "Noida, India",
+    foundedYear: 1976,
+    ownerId: "14"
+  },
+  {
+    id: "13",
+    name: "Microsoft",
+    description: "Global technology company providing software, devices, and cloud services",
+    logo: "https://logo.clearbit.com/microsoft.com",
+    website: "https://www.microsoft.com",
+    industry: "Technology",
+    size: "180000+",
+    location: "Redmond, WA",
+    foundedYear: 1975,
+    ownerId: "15"
+  },
+  {
+    id: "14",
+    name: "Amazon",
+    description: "E-commerce, cloud computing, digital streaming, and AI company",
+    logo: "https://logo.clearbit.com/amazon.com",
+    website: "https://www.amazon.com",
+    industry: "Technology/Retail",
+    size: "1400000+",
+    location: "Seattle, WA",
+    foundedYear: 1994,
+    ownerId: "16"
+  },
+  {
+    id: "15",
+    name: "IBM",
+    description: "Technology and consulting company with expertise in AI and cloud computing",
+    logo: "https://logo.clearbit.com/ibm.com",
+    website: "https://www.ibm.com",
+    industry: "Technology",
+    size: "280000+",
+    location: "Armonk, NY",
+    foundedYear: 1911,
+    ownerId: "17"
+  },
+  {
+    id: "16",
+    name: "Samsung Electronics",
+    description: "Multinational electronics company",
+    logo: "https://logo.clearbit.com/samsung.com",
+    website: "https://www.samsung.com",
+    industry: "Electronics",
+    size: "287000+",
+    location: "Suwon, South Korea",
+    foundedYear: 1969,
+    ownerId: "18"
+  },
+  {
+    id: "17",
+    name: "Tech Mahindra",
+    description: "Indian multinational provider of information technology and networking technology solutions",
+    logo: "https://logo.clearbit.com/techmahindra.com",
+    website: "https://www.techmahindra.com",
+    industry: "IT Services",
+    size: "125000+",
+    location: "Pune, India",
+    foundedYear: 1986,
+    ownerId: "19"
+  },
+  {
+    id: "18",
+    name: "Cognizant",
+    description: "American multinational IT services and consulting company with significant operations in India",
+    logo: "https://logo.clearbit.com/cognizant.com",
+    website: "https://www.cognizant.com",
+    industry: "IT Services",
+    size: "300000+",
+    location: "Teaneck, NJ",
+    foundedYear: 1994,
+    ownerId: "20"
+  },
+  {
+    id: "19",
+    name: "L&T Infotech",
+    description: "Global technology consulting and digital solutions company",
+    logo: "https://logo.clearbit.com/lntinfotech.com",
+    website: "https://www.lntinfotech.com",
+    industry: "IT Services",
+    size: "30000+",
+    location: "Mumbai, India",
+    foundedYear: 1997,
+    ownerId: "21"
+  },
+  {
+    id: "20",
+    name: "Accenture",
+    description: "Global professional services company with leading capabilities in digital, cloud and security",
+    logo: "https://logo.clearbit.com/accenture.com",
+    website: "https://www.accenture.com",
+    industry: "Consulting",
+    size: "500000+",
+    location: "Dublin, Ireland",
+    foundedYear: 1989,
+    ownerId: "22"
   }
 ];
 
-// Sample jobs - expanded with 20+ listings
+// Sample jobs with updated dates (more recent)
 const jobs: Job[] = [
   {
     id: "1",
     title: "Frontend Developer",
     company: companies[0],
-    location: "San Francisco, CA",
+    location: "Mountain View, CA",
     type: "full-time",
     category: "Development",
     description: "We're looking for a frontend developer with React experience to join our team.",
@@ -169,9 +313,9 @@ const jobs: Job[] = [
       max: 120000,
       currency: "USD"
     },
-    postedAt: new Date("2023-04-01"),
-    updatedAt: new Date("2023-04-01"),
-    deadline: new Date("2023-05-01"),
+    postedAt: new Date("2025-04-15"),
+    updatedAt: new Date("2025-04-15"),
+    deadline: new Date("2025-05-15"),
     status: "open",
     skills: ["React", "TypeScript", "CSS", "HTML"],
     applications: [],
@@ -905,6 +1049,33 @@ const jobs: Job[] = [
   }
 ];
 
+// Update all job dates to be recent (within past month)
+for (let job of jobs) {
+  if (job.id !== "1") { // Skip the first one we already updated manually
+    // Random date in the last month
+    const daysAgo = Math.floor(Math.random() * 30);
+    const postedDate = new Date();
+    postedDate.setDate(postedDate.getDate() - daysAgo);
+    
+    job.postedAt = postedDate;
+    job.updatedAt = postedDate;
+    
+    // Set deadline to be 30 days after posting
+    const deadline = new Date(postedDate);
+    deadline.setDate(deadline.getDate() + 30);
+    job.deadline = deadline;
+  }
+}
+
+// Fallback logo for any company if the clearbit logo fails
+const getCompanyLogo = (company: Company): string => {
+  if (!company.logo || company.logo.includes('clearbit')) {
+    // Return a backup logo from a reliable source
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(company.name)}&background=random&color=fff&size=128`;
+  }
+  return company.logo;
+};
+
 // Sample job applications
 const applications: JobApplication[] = [
   {
@@ -1109,6 +1280,11 @@ export const api = {
     const endIndex = startIndex + limit;
     const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
     
+    // Add company logo fallbacks before returning
+    for (const job of paginatedJobs) {
+      job.company.logo = getCompanyLogo(job.company);
+    }
+    
     return {
       jobs: paginatedJobs,
       pagination: {
@@ -1125,6 +1301,10 @@ export const api = {
     if (!job) {
       throw new Error("Job not found");
     }
+    
+    // Add logo fallback
+    job.company.logo = getCompanyLogo(job.company);
+    
     return job;
   },
   
@@ -1359,12 +1539,23 @@ export const api = {
     if (!company) {
       throw new Error("Company not found");
     }
+    
+    // Add logo fallback
+    company.logo = getCompanyLogo(company);
+    
     return company;
   },
   
   getCompanyByOwner: async (userId: string) => {
     await delay(500);
-    return companies.find(c => c.ownerId === userId);
+    const company = companies.find(c => c.ownerId === userId);
+    
+    if (company) {
+      // Add logo fallback
+      company.logo = getCompanyLogo(company);
+    }
+    
+    return company;
   },
   
   updateCompany: async (companyId: string, companyData: Partial<Company>) => {
@@ -1424,6 +1615,7 @@ export const api = {
     }
   },
   
-  // Add jobs property for direct access
-  jobs
+  // Add jobs and companies properties for direct access
+  jobs,
+  companies
 };
