@@ -1,6 +1,8 @@
-import React from "react";
+
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import MainLayout from "@/components/layout/MainLayout";
-import { Search } from "lucide-react"; // Fix: import Search from lucide-react
+import { Search } from "lucide-react"; 
 import { useAuth } from "@/contexts/AuthContext";
 import { useJobs } from "@/contexts/JobContext";
 import { api } from "@/services/api";
