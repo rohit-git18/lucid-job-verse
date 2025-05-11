@@ -1,4 +1,3 @@
-
 import { toast } from "sonner";
 import { 
   User, 
@@ -80,10 +79,70 @@ const companies: Company[] = [
     location: "Boston, MA",
     foundedYear: 2010,
     ownerId: "5"
+  },
+  {
+    id: "4",
+    name: "Digital Creatives",
+    description: "Creative digital agency specializing in branding and design",
+    logo: "https://logo.clearbit.com/adobe.com",
+    website: "https://digitalcreatives.com",
+    industry: "Design",
+    size: "51-200",
+    location: "Los Angeles, CA",
+    foundedYear: 2012,
+    ownerId: "6"
+  },
+  {
+    id: "5",
+    name: "EduTech Innovations",
+    description: "Transforming education through technology",
+    logo: "https://logo.clearbit.com/coursera.org",
+    website: "https://edutechinnovations.com",
+    industry: "Education",
+    size: "51-200",
+    location: "Austin, TX",
+    foundedYear: 2015,
+    ownerId: "7"
+  },
+  {
+    id: "6",
+    name: "Green Energy Solutions",
+    description: "Sustainable energy solutions for a greener future",
+    logo: "https://logo.clearbit.com/tesla.com",
+    website: "https://greenenergysolutions.com",
+    industry: "Energy",
+    size: "201-500",
+    location: "Denver, CO",
+    foundedYear: 2010,
+    ownerId: "8"
+  },
+  {
+    id: "7",
+    name: "Global Logistics",
+    description: "International shipping and logistics services",
+    logo: "https://logo.clearbit.com/fedex.com",
+    website: "https://globallogistics.com",
+    industry: "Logistics",
+    size: "1000+",
+    location: "Chicago, IL",
+    foundedYear: 1998,
+    ownerId: "9"
+  },
+  {
+    id: "8",
+    name: "Food Delivery Network",
+    description: "Connecting restaurants with hungry customers",
+    logo: "https://logo.clearbit.com/doordash.com",
+    website: "https://fooddeliverynetwork.com",
+    industry: "Food & Beverage",
+    size: "501-1000",
+    location: "Seattle, WA",
+    foundedYear: 2014,
+    ownerId: "10"
   }
 ];
 
-// Sample jobs
+// Sample jobs - expanded with 20+ listings
 const jobs: Job[] = [
   {
     id: "1",
@@ -111,6 +170,7 @@ const jobs: Job[] = [
       currency: "USD"
     },
     postedAt: new Date("2023-04-01"),
+    updatedAt: new Date("2023-04-01"),
     deadline: new Date("2023-05-01"),
     status: "open",
     skills: ["React", "TypeScript", "CSS", "HTML"],
@@ -143,6 +203,7 @@ const jobs: Job[] = [
       currency: "USD"
     },
     postedAt: new Date("2023-03-25"),
+    updatedAt: new Date("2023-03-25"),
     deadline: new Date("2023-04-25"),
     status: "open",
     skills: ["Node.js", "MongoDB", "Express", "SQL"],
@@ -175,6 +236,7 @@ const jobs: Job[] = [
       currency: "USD"
     },
     postedAt: new Date("2023-04-05"),
+    updatedAt: new Date("2023-04-05"),
     deadline: new Date("2023-05-05"),
     status: "open",
     skills: ["Financial Modeling", "Excel", "Data Analysis", "Reporting"],
@@ -207,6 +269,7 @@ const jobs: Job[] = [
       currency: "USD"
     },
     postedAt: new Date("2023-04-10"),
+    updatedAt: new Date("2023-04-10"),
     deadline: new Date("2023-05-10"),
     status: "open",
     skills: ["Figma", "UI Design", "UX Research", "Prototyping"],
@@ -239,6 +302,7 @@ const jobs: Job[] = [
       currency: "USD"
     },
     postedAt: new Date("2023-04-08"),
+    updatedAt: new Date("2023-04-08"),
     deadline: new Date("2023-05-08"),
     status: "open",
     skills: ["Healthcare Management", "Regulatory Compliance", "Staff Management", "Budget Planning"],
@@ -271,11 +335,573 @@ const jobs: Job[] = [
       currency: "USD"
     },
     postedAt: new Date("2023-04-03"),
+    updatedAt: new Date("2023-04-03"),
     deadline: new Date("2023-05-03"),
     status: "open",
     skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"],
     applications: [],
     views: 78
+  },
+  {
+    id: "7",
+    title: "UI/UX Designer",
+    company: companies[3],
+    location: "Los Angeles, CA",
+    type: "full-time",
+    category: "Design",
+    description: "Join our creative team to design beautiful and intuitive user interfaces for web and mobile applications.",
+    requirements: [
+      "3+ years of UI/UX design experience",
+      "Proficient with Figma and Adobe Creative Suite",
+      "Experience with user research and testing",
+      "Strong portfolio showcasing previous work"
+    ],
+    responsibilities: [
+      "Create wireframes and prototypes",
+      "Design user-centered interfaces",
+      "Collaborate with developers to implement designs",
+      "Conduct usability testing"
+    ],
+    salary: {
+      min: 80000,
+      max: 110000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-29"),
+    updatedAt: new Date("2023-03-29"),
+    deadline: new Date("2023-04-29"),
+    status: "open",
+    skills: ["Figma", "Adobe XD", "UI Design", "UX Research"],
+    applications: [],
+    views: 67
+  },
+  {
+    id: "8",
+    title: "Data Scientist",
+    company: companies[0],
+    location: "Remote",
+    type: "full-time",
+    category: "Data Science",
+    description: "Looking for an experienced data scientist to help us extract insights from our large datasets.",
+    requirements: [
+      "Master's or PhD in Data Science, Statistics, or related field",
+      "3+ years of experience with machine learning",
+      "Proficient in Python and data visualization tools",
+      "Experience with big data technologies"
+    ],
+    responsibilities: [
+      "Develop predictive models",
+      "Analyze large datasets",
+      "Create data visualizations",
+      "Present findings to stakeholders"
+    ],
+    salary: {
+      min: 115000,
+      max: 160000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-22"),
+    updatedAt: new Date("2023-03-22"),
+    deadline: new Date("2023-04-22"),
+    status: "open",
+    skills: ["Python", "Machine Learning", "SQL", "Data Visualization", "Statistics"],
+    applications: [],
+    views: 123
+  },
+  {
+    id: "9",
+    title: "Product Manager",
+    company: companies[3],
+    location: "Los Angeles, CA",
+    type: "full-time",
+    category: "Product",
+    description: "We're seeking a product manager to lead the development of our digital products.",
+    requirements: [
+      "5+ years of product management experience",
+      "Experience with agile methodologies",
+      "Strong analytical skills",
+      "Excellent communication abilities"
+    ],
+    responsibilities: [
+      "Define product strategy and roadmap",
+      "Work with designers and developers",
+      "Conduct market research",
+      "Prioritize features based on business value"
+    ],
+    salary: {
+      min: 100000,
+      max: 150000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-20"),
+    updatedAt: new Date("2023-03-20"),
+    deadline: new Date("2023-04-20"),
+    status: "open",
+    skills: ["Product Development", "Agile", "User Stories", "Roadmapping"],
+    applications: [],
+    views: 89
+  },
+  {
+    id: "10",
+    title: "Marketing Specialist",
+    company: companies[4],
+    location: "Austin, TX",
+    type: "full-time",
+    category: "Marketing",
+    description: "Join our marketing team to help promote our educational technology solutions.",
+    requirements: [
+      "3+ years in digital marketing",
+      "Experience with content creation",
+      "Knowledge of SEO and SEM",
+      "Data-driven mindset"
+    ],
+    responsibilities: [
+      "Create marketing campaigns",
+      "Manage social media accounts",
+      "Analyze marketing metrics",
+      "Develop content strategy"
+    ],
+    salary: {
+      min: 65000,
+      max: 85000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-25"),
+    updatedAt: new Date("2023-03-25"),
+    deadline: new Date("2023-04-25"),
+    status: "open",
+    skills: ["Digital Marketing", "SEO", "Content Creation", "Analytics"],
+    applications: [],
+    views: 56
+  },
+  {
+    id: "11",
+    title: "Full Stack Developer",
+    company: companies[5],
+    location: "Remote",
+    type: "full-time",
+    category: "Development",
+    description: "Looking for a full stack developer to work on our renewable energy software platform.",
+    requirements: [
+      "4+ years of full stack development",
+      "Experience with React and Node.js",
+      "Database design experience",
+      "Understanding of cloud services (AWS/Azure)"
+    ],
+    responsibilities: [
+      "Build end-to-end features",
+      "Optimize application performance",
+      "Design database schemas",
+      "Deploy applications to cloud environments"
+    ],
+    salary: {
+      min: 90000,
+      max: 130000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-18"),
+    updatedAt: new Date("2023-03-18"),
+    deadline: new Date("2023-04-18"),
+    status: "open",
+    skills: ["React", "Node.js", "MongoDB", "AWS", "Full Stack"],
+    applications: [],
+    views: 112
+  },
+  {
+    id: "12",
+    title: "Operations Manager",
+    company: companies[6],
+    location: "Chicago, IL",
+    type: "full-time",
+    category: "Operations",
+    description: "We're looking for an operations manager to oversee our logistics processes.",
+    requirements: [
+      "5+ years in logistics or operations",
+      "Experience managing teams",
+      "Knowledge of supply chain management",
+      "Strong problem-solving skills"
+    ],
+    responsibilities: [
+      "Oversee daily operations",
+      "Optimize logistics processes",
+      "Manage inventory and resources",
+      "Lead a team of logistics coordinators"
+    ],
+    salary: {
+      min: 85000,
+      max: 110000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-15"),
+    updatedAt: new Date("2023-03-15"),
+    deadline: new Date("2023-04-15"),
+    status: "open",
+    skills: ["Operations Management", "Logistics", "Supply Chain", "Team Management"],
+    applications: [],
+    views: 78
+  },
+  {
+    id: "13",
+    title: "Mobile App Developer",
+    company: companies[7],
+    location: "Seattle, WA",
+    type: "full-time",
+    category: "Development",
+    description: "Join our mobile development team to build our food delivery applications.",
+    requirements: [
+      "3+ years of mobile app development",
+      "Experience with React Native or Flutter",
+      "Knowledge of iOS and Android platforms",
+      "Understanding of app store publishing processes"
+    ],
+    responsibilities: [
+      "Develop cross-platform mobile applications",
+      "Implement UI/UX designs",
+      "Optimize app performance",
+      "Fix bugs and technical issues"
+    ],
+    salary: {
+      min: 85000,
+      max: 120000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-22"),
+    updatedAt: new Date("2023-03-22"),
+    deadline: new Date("2023-04-22"),
+    status: "open",
+    skills: ["React Native", "Flutter", "Mobile Development", "JavaScript", "Dart"],
+    applications: [],
+    views: 95
+  },
+  {
+    id: "14",
+    title: "Finance Analyst",
+    company: companies[1],
+    location: "New York, NY",
+    type: "full-time",
+    category: "Finance",
+    description: "Seeking a financial analyst to join our corporate finance team.",
+    requirements: [
+      "Bachelor's degree in Finance or related field",
+      "2+ years of financial analysis experience",
+      "Proficient in Excel and financial modeling",
+      "Knowledge of financial reporting standards"
+    ],
+    responsibilities: [
+      "Prepare financial reports and forecasts",
+      "Conduct financial analysis",
+      "Support budgeting processes",
+      "Assist with investor relations"
+    ],
+    salary: {
+      min: 70000,
+      max: 90000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-25"),
+    updatedAt: new Date("2023-03-25"),
+    deadline: new Date("2023-04-25"),
+    status: "open",
+    skills: ["Financial Analysis", "Excel", "Budgeting", "Forecasting"],
+    applications: [],
+    views: 63
+  },
+  {
+    id: "15",
+    title: "Customer Support Specialist",
+    company: companies[4],
+    location: "Remote",
+    type: "full-time",
+    category: "Customer Service",
+    description: "Join our support team to help customers make the most of our educational platform.",
+    requirements: [
+      "2+ years in customer support",
+      "Excellent communication skills",
+      "Problem-solving abilities",
+      "Experience with help desk software"
+    ],
+    responsibilities: [
+      "Respond to customer inquiries",
+      "Troubleshoot technical issues",
+      "Document common problems",
+      "Provide feedback to product team"
+    ],
+    salary: {
+      min: 45000,
+      max: 60000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-29"),
+    updatedAt: new Date("2023-03-29"),
+    deadline: new Date("2023-04-29"),
+    status: "open",
+    skills: ["Customer Service", "Communication", "Troubleshooting", "Zendesk"],
+    applications: [],
+    views: 42
+  },
+  {
+    id: "16",
+    title: "Content Marketing Manager",
+    company: companies[7],
+    location: "Seattle, WA",
+    type: "full-time",
+    category: "Marketing",
+    description: "Looking for a content marketing manager to drive our content strategy.",
+    requirements: [
+      "4+ years in content marketing",
+      "Experience managing a content calendar",
+      "Strong writing and editing skills",
+      "SEO knowledge"
+    ],
+    responsibilities: [
+      "Create content marketing strategy",
+      "Produce blog posts and articles",
+      "Oversee social media content",
+      "Analyze content performance"
+    ],
+    salary: {
+      min: 75000,
+      max: 95000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-20"),
+    updatedAt: new Date("2023-03-20"),
+    deadline: new Date("2023-04-20"),
+    status: "open",
+    skills: ["Content Marketing", "SEO", "Copywriting", "Editorial Planning"],
+    applications: [],
+    views: 51
+  },
+  {
+    id: "17",
+    title: "IT Support Technician",
+    company: companies[0],
+    location: "San Francisco, CA",
+    type: "full-time",
+    category: "IT",
+    description: "Join our IT team to provide technical support to our employees.",
+    requirements: [
+      "2+ years in IT support",
+      "Knowledge of Windows and Mac operating systems",
+      "Experience with network troubleshooting",
+      "Familiarity with IT security best practices"
+    ],
+    responsibilities: [
+      "Resolve technical issues",
+      "Set up new employee workstations",
+      "Maintain IT documentation",
+      "Assist with software installations"
+    ],
+    salary: {
+      min: 55000,
+      max: 70000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-27"),
+    updatedAt: new Date("2023-03-27"),
+    deadline: new Date("2023-04-27"),
+    status: "open",
+    skills: ["IT Support", "Troubleshooting", "Hardware", "Networking", "Windows", "macOS"],
+    applications: [],
+    views: 38
+  },
+  {
+    id: "18",
+    title: "HR Coordinator",
+    company: companies[5],
+    location: "Denver, CO",
+    type: "full-time",
+    category: "Human Resources",
+    description: "Seeking an HR Coordinator to support our human resources department.",
+    requirements: [
+      "2+ years in HR administration",
+      "Knowledge of HR policies and procedures",
+      "Experience with HRIS systems",
+      "Strong organizational skills"
+    ],
+    responsibilities: [
+      "Assist with recruitment process",
+      "Maintain employee records",
+      "Coordinate onboarding activities",
+      "Support HR initiatives"
+    ],
+    salary: {
+      min: 50000,
+      max: 65000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-18"),
+    updatedAt: new Date("2023-03-18"),
+    deadline: new Date("2023-04-18"),
+    status: "open",
+    skills: ["HR Administration", "Recruitment", "Onboarding", "HRIS"],
+    applications: [],
+    views: 45
+  },
+  {
+    id: "19",
+    title: "Social Media Manager",
+    company: companies[3],
+    location: "Los Angeles, CA",
+    type: "full-time",
+    category: "Marketing",
+    description: "We're looking for a social media manager to grow our online presence.",
+    requirements: [
+      "3+ years managing social media accounts",
+      "Experience with social media analytics",
+      "Content creation skills",
+      "Knowledge of social media trends"
+    ],
+    responsibilities: [
+      "Manage company social media accounts",
+      "Create engaging content",
+      "Analyze social media performance",
+      "Develop social media strategy"
+    ],
+    salary: {
+      min: 60000,
+      max: 80000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-22"),
+    updatedAt: new Date("2023-03-22"),
+    deadline: new Date("2023-04-22"),
+    status: "open",
+    skills: ["Social Media Marketing", "Content Creation", "Analytics", "Community Management"],
+    applications: [],
+    views: 72
+  },
+  {
+    id: "20",
+    title: "Software Engineer Intern",
+    company: companies[0],
+    location: "San Francisco, CA",
+    type: "internship",
+    category: "Development",
+    description: "Summer internship opportunity for aspiring software engineers.",
+    requirements: [
+      "Currently pursuing a Computer Science degree",
+      "Knowledge of at least one programming language",
+      "Eager to learn and grow",
+      "Good problem-solving skills"
+    ],
+    responsibilities: [
+      "Assist with development tasks",
+      "Learn software development practices",
+      "Participate in code reviews",
+      "Work on assigned projects"
+    ],
+    salary: {
+      min: 25000,
+      max: 35000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-28"),
+    updatedAt: new Date("2023-03-28"),
+    deadline: new Date("2023-04-28"),
+    status: "open",
+    skills: ["Programming", "Software Development", "Learning Mindset"],
+    applications: [],
+    views: 105
+  },
+  {
+    id: "21",
+    title: "Project Manager",
+    company: companies[2],
+    location: "Boston, MA",
+    type: "full-time",
+    category: "Management",
+    description: "Looking for a project manager to oversee our healthcare technology projects.",
+    requirements: [
+      "5+ years of project management experience",
+      "PMP certification preferred",
+      "Experience in healthcare industry",
+      "Strong leadership skills"
+    ],
+    responsibilities: [
+      "Lead project teams",
+      "Develop project plans",
+      "Manage timelines and budgets",
+      "Report on project status"
+    ],
+    salary: {
+      min: 90000,
+      max: 120000,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-24"),
+    updatedAt: new Date("2023-03-24"),
+    deadline: new Date("2023-04-24"),
+    status: "open",
+    skills: ["Project Management", "Agile", "Budgeting", "Leadership", "Healthcare"],
+    applications: [],
+    views: 62
+  },
+  {
+    id: "22",
+    title: "Data Entry Specialist",
+    company: companies[1],
+    location: "Remote",
+    type: "part-time",
+    category: "Administrative",
+    description: "Part-time position for accurate data entry and management.",
+    requirements: [
+      "1+ years of data entry experience",
+      "Fast typing speed",
+      "Attention to detail",
+      "Basic Excel skills"
+    ],
+    responsibilities: [
+      "Enter data into company systems",
+      "Verify data accuracy",
+      "Maintain digital records",
+      "Perform basic data analysis"
+    ],
+    salary: {
+      min: 18,
+      max: 22,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-29"),
+    updatedAt: new Date("2023-03-29"),
+    deadline: new Date("2023-04-29"),
+    status: "open",
+    skills: ["Data Entry", "Excel", "Accuracy", "Organization"],
+    applications: [],
+    views: 39
+  },
+  {
+    id: "23",
+    title: "Content Writer",
+    company: companies[4],
+    location: "Austin, TX",
+    type: "contract",
+    category: "Content",
+    description: "Contract position for creating educational content for our platform.",
+    requirements: [
+      "3+ years of content writing experience",
+      "SEO knowledge",
+      "Experience in education industry preferred",
+      "Portfolio of previous work"
+    ],
+    responsibilities: [
+      "Create engaging educational content",
+      "Optimize content for SEO",
+      "Follow brand guidelines",
+      "Meet content deadlines"
+    ],
+    salary: {
+      min: 40,
+      max: 60,
+      currency: "USD"
+    },
+    postedAt: new Date("2023-03-26"),
+    updatedAt: new Date("2023-03-26"),
+    deadline: new Date("2023-04-26"),
+    status: "open",
+    skills: ["Content Writing", "SEO", "Education", "Copywriting"],
+    applications: [],
+    views: 48
   }
 ];
 
@@ -547,7 +1173,13 @@ export const api = {
         throw new Error("Not authorized to update this job");
       }
       
-      jobs[index] = { ...jobs[index], ...jobData, updatedAt: new Date() };
+      // Add updatedAt to jobData
+      const updatedJobData = { 
+        ...jobData, 
+        updatedAt: new Date() 
+      };
+      
+      jobs[index] = { ...jobs[index], ...updatedJobData };
       toast.success("Job updated successfully");
       return jobs[index];
     } catch (error: any) {
@@ -790,5 +1422,8 @@ export const api = {
       toast.error(error.message || "Failed to create company");
       throw error;
     }
-  }
+  },
+  
+  // Add jobs property for direct access
+  jobs
 };

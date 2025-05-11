@@ -112,6 +112,7 @@ export interface Job {
     currency: string;
   };
   postedAt: Date;
+  updatedAt?: Date; // Add this field to fix the error
   deadline?: Date;
   status: "open" | "closed" | "draft";
   skills: string[];

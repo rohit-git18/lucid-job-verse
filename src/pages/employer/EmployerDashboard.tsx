@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "@/components/layout/MainLayout";
@@ -44,26 +43,25 @@ const EmployerDashboard = () => {
           setCompany(null);
         }
 
-        // Fetch jobs data (for demo, using our mock data)
-        if (api.jobs) {
-          const companyJobs = api.jobs.filter(job => job.company.ownerId === user.id);
-          setJobs(companyJobs);
+        // Fetch jobs data - get from API directly rather than accessing api.jobs
+        const jobsResponse = await api.getJobs();
+        const companyJobs = jobsResponse.jobs.filter(job => job.company.ownerId === user.id);
+        setJobs(companyJobs);
 
-          // Get recent applications for these jobs
-          const applications: JobApplication[] = [];
-          for (const job of companyJobs) {
-            try {
-              const jobApplications = await api.getApplicationsForJob(job.id);
-              applications.push(...jobApplications);
-            } catch (error) {
-              console.error(`Error fetching applications for job ${job.id}:`, error);
-            }
+        // Get recent applications for these jobs
+        const applications: JobApplication[] = [];
+        for (const job of companyJobs) {
+          try {
+            const jobApplications = await api.getApplicationsForJob(job.id);
+            applications.push(...jobApplications);
+          } catch (error) {
+            console.error(`Error fetching applications for job ${job.id}:`, error);
           }
-          
-          // Sort by date and take the 5 most recent
-          applications.sort((a, b) => new Date(b.appliedAt).getTime() - new Date(a.appliedAt).getTime());
-          setRecentApplications(applications.slice(0, 5));
         }
+        
+        // Sort by date and take the 5 most recent
+        applications.sort((a, b) => new Date(b.appliedAt).getTime() - new Date(a.appliedAt).getTime());
+        setRecentApplications(applications.slice(0, 5));
       } catch (error) {
         console.error("Error fetching dashboard data:", error);
       } finally {
