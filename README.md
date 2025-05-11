@@ -1,73 +1,144 @@
-# Welcome to your Lovable project
 
-## Project info
+# JobFinder - Full Stack MERN Job Portal 
 
-**URL**: https://lovable.dev/projects/55b368a7-c701-4da1-b7e5-32ac08fdb4b5
+JobFinder is a comprehensive job portal web application built with the MERN stack (MongoDB, Express, React, and Node.js). It connects job seekers with employers, providing a seamless platform for job hunting and talent recruitment.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+### For Job Seekers
+- User authentication and profile management
+- Create and manage detailed resumes
+- Search and filter jobs based on various criteria
+- Apply to jobs with personalized cover letters
+- Track application status
+- Receive job recommendations based on skills and experience
 
-**Use Lovable**
+### For Employers
+- Company profile management
+- Post and manage job listings
+- Review and manage applications
+- Track job performance metrics
+- Connect with qualified candidates
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/55b368a7-c701-4da1-b7e5-32ac08fdb4b5) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
+- React (with TypeScript)
+- React Router for navigation
+- React Query for data fetching
+- Tailwind CSS for styling
+- Shadcn UI components
+- Lucide React for icons
 
-**Use your preferred IDE**
+### Backend (Mock Implementation)
+- Mock API service for demonstration
+- In a production environment, this would be replaced with:
+  - Node.js/Express.js
+  - MongoDB for database
+  - JSON Web Tokens for authentication
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/        # Reusable UI components
+│   ├── auth/          # Authentication related components
+│   ├── jobs/          # Job listing related components
+│   ├── layout/        # Layout components
+│   └── ui/            # Shadcn UI components
+├── contexts/          # React context providers
+├── hooks/             # Custom React hooks
+├── pages/             # Main page components
+│   ├── auth/          # Authentication pages
+│   ├── employer/      # Employer-specific pages
+│   ├── jobseeker/     # Job seeker-specific pages
+│   └── jobs/          # Job listing pages
+├── services/          # API services
+└── types/             # TypeScript type definitions
 ```
 
-**Edit a file directly in GitHub**
+## Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-**Use GitHub Codespaces**
+### Installation
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Clone the repository
+   ```
+   git clone https://github.com/your-username/jobfinder.git
+   cd jobfinder
+   ```
 
-## What technologies are used for this project?
+2. Install dependencies
+   ```
+   npm install
+   ```
 
-This project is built with:
+3. Start the development server
+   ```
+   npm run dev
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+4. Open your browser and navigate to `http://localhost:8080`
 
-## How can I deploy this project?
+## Demo Accounts
 
-Simply open [Lovable](https://lovable.dev/projects/55b368a7-c701-4da1-b7e5-32ac08fdb4b5) and click on Share -> Publish.
+For demonstration purposes, you can use the following accounts:
 
-## Can I connect a custom domain to my Lovable project?
+### Job Seeker
+- Email: john@example.com
+- Password: password
 
-Yes, you can!
+### Employer
+- Email: bob@techcorp.com
+- Password: password
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Environment Variables
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For a production environment, create a `.env` file in the root directory with the following variables:
+
+```
+# MongoDB connection string
+MONGODB_URI=your_mongodb_connection_string
+
+# JWT secret for authentication
+JWT_SECRET=your_jwt_secret
+
+# Port for the server (default: 5000)
+PORT=5000
+
+# Node environment (development, production)
+NODE_ENV=development
+```
+
+## Deployment
+
+This application can be deployed to various platforms:
+
+- Frontend: Vercel, Netlify, or any static hosting service
+- Backend: Heroku, AWS, Digital Ocean, or any Node.js hosting platform
+
+## Future Enhancements
+
+- Real-time notifications for application updates
+- Advanced search with AI-powered job matching
+- Integrated messaging system between employers and candidates
+- Social media integration for profile enrichment
+- Interview scheduling functionality
+- Resume analysis and improvement suggestions
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Design inspiration from leading job platforms
+- Icons provided by Lucide React
+- UI components from Shadcn UI
+
+---
+
+Created as a final year college project demonstration.
